@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rich Text Editor</title>
+		<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="html2xhtml.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="richtext_edit.js"></script>
+		
+		<script type="text/javascript">
+		function rteData(rteId) {
+			updateRTEs();
+			var iframe = document.getElementById(rteId);
+			var iframe_contents = iframe.contentDocument.body.innerHTML;
+			alert(iframe_contents);
+		}
+		</script>
+	</head>
+	<body onload="">
+		
+		<table border="1" width="800">
+			<tr>
+				<td>Demo1</td>
+				<td>
+					<div id="demo1">
+						<noscript><p><b>Javascript must be enabled to use this form.</b></p></noscript>
+						<script language="JavaScript" type="text/javascript">
+						initRTE("./images/", "./", "", false);
+						var demo1 = new richTextEditor('demo1rte');
+						demo1.html = 'here&#39;s Mouli "\<em\>preloaded\<\/em\>&nbsp;\<b\>content\<\/b\>"';
+						demo1.build();
+						</script>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Demo2</td>
+				<td>
+					<div id="demo2" name="demo2">
+						<script language="JavaScript" type="text/javascript">
+						initRTE("./images/", "./", "", false);
+						var demo2 = new richTextEditor('demo2rte');
+						demo2.html = 'here&#39;s Krishna "\<em\>preloaded\<\/em\>&nbsp;\<b\>content\<\/b\>"';
+						demo2.build();
+						</script>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Demo3</td>
+				<td>
+					<div id="demo3" name="demo3">
+						<script language="JavaScript" type="text/javascript">
+						initRTE("./images/", "./", "", false);
+						var rte3 = new richTextEditor('demo3rte');
+						rte3.html = 'here&#39;s Mallina "\<em\>preloaded\<\/em\>&nbsp;\<b\>content\<\/b\>"';
+						rte3.build();
+						</script>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<br/>
+		<button onclick="rteData('demo1rte')">Get RTE1 Data</button>
+		<button onclick="rteData('demo2rte')">Get RTE2 Data</button>
+		<button onclick="rteData('demo3rte')">Get RTE3 Data</button>
+		
+	</body>
+</html>
