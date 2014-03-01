@@ -1,0 +1,32 @@
+getting contents from iframe (pure javascript)
+----------------------------------------------
+var iframe = document.getElementById("awc_frame");
+var iframe_contents = iframe.contentDocument.body.innerHTML;
+
+
+iframes not working in IE7
+--------------------------
+http://social.msdn.microsoft.com/Forums/ie/en-US/043994d0-06a3-48b6-99ee-51f346c09277/iframe-doesnt-work-in-ie7?forum=iewebdevelopment
+
+
+append <script/> tag to <div/> tag
+----------------------------------
+var script = document.createElement( 'script' );
+script.type = 'text/javascript';
+script.src = url;
+$("#someElement").append( script );
+
+
+caution when using iframe
+-------------------------
+http://www.stevesouders.com/blog/2009/06/03/using-iframes-sparingly/
+
+
+mozilla RichTextEditor documentation
+-------------------------------------
+http://www-archive.mozilla.org/editor/midas-spec.html
+
+
+cross browser RichTextEditor
+----------------------------
+http://www.kevinroth.com/rte/
