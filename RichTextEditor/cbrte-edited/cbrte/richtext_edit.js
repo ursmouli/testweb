@@ -447,6 +447,9 @@ function enableDesignMode(rte, html, readOnly) {
 			frameStyle += "body {\n";
 			frameStyle += "	background: #FFF;\n";
 			frameStyle += "}\n";
+			frameStyle += "p {\n";
+			frameStyle += "	margin: 0;\n";
+			frameStyle += "}\n";
 			frameStyle += "</style>\n";
 		}
 		
