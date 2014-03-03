@@ -354,9 +354,9 @@ function writeRichText(rte) {
 				document.writeln('				<td><img class="rteImage" src="' + imagesPath + 'outdent.gif" width="25" height="24" alt="Outdent" title="Outdent" onmousedown="rteCommand(\'' + rte.rteID + '\', \'outdent\')"></td>');
 			if (cmdIndentEnabled && rte.cmdIndent)
 				document.writeln('				<td><img class="rteImage" src="' + imagesPath + 'indent.gif" width="25" height="24" alt="Indent" title="Indent" onmousedown="rteCommand(\'' + rte.rteID + '\', \'indent\')"></td>');
-			if (cmdForeColorEnabled && rte.cmdForeColor)
+			if (cmdForeColorEnabled && rte.cmdForeColor && false)
 				document.writeln('				<td><div id="forecolor_' + rte.rteID + '"><img class="rteImage" src="' + imagesPath + 'textcolor.gif" width="25" height="24" alt="Text Color" title="Text Color" onmousedown="dlgColorPalette(\'' + rte.rteID + '\', \'forecolor\', \'\'); return false;"></div></td>');
-			if (cmdHiliteColorEnabled && rte.cmdHiliteColor)
+			if (cmdHiliteColorEnabled && rte.cmdHiliteColor && false)
 				document.writeln('				<td><div id="hilitecolor_' + rte.rteID + '"><img class="rteImage" src="' + imagesPath + 'bgcolor.gif" width="25" height="24" alt="Background Color" title="Background Color" onmousedown="dlgColorPalette(\'' + rte.rteID + '\', \'hilitecolor\', \'\'); return false;"></div></td>');
 			if ((cmdInsertHTMLEnabled || cmdCreateLinkEnabled) && rte.cmdInsertLink)
 				document.writeln('				<td><img class="rteImage" src="' + imagesPath + 'hyperlink.gif" width="25" height="24" alt="Insert Link" title="Insert Link" onmousedown="dlgInsertLink(\'' + rte.rteID + '\')"></td>');
@@ -384,7 +384,7 @@ function writeRichText(rte) {
 				document.writeln('				<td><img class="rteImage" src="' + imagesPath + 'removeformat.gif" width="25" height="24" alt="Remove Formatting" title="Remove Formatting" onmousedown="rteCommand(\'' + rte.rteID + '\', \'removeformat\')"></td>');
 				
 			if (cmdFontNameEnabled && rte.cmdFontName) {
-				document.writeln('					<td>&nbsp;</td>');
+				document.writeln('				<td>&nbsp;</td>');
 				document.writeln('				<td>');
 				document.writeln('					<select id="fontname_' + rte.rteID + '" onchange="selectFont(\'' + rte.rteID + '\', this.id)">');
 				document.writeln('						<option value="Font" selected>[Font]</option>');
@@ -407,6 +407,37 @@ function writeRichText(rte) {
 				document.writeln('						<option value="5">5</option>');
 				document.writeln('						<option value="6">6</option>');
 				document.writeln('						<option value="7">7</option>');
+				document.writeln('					</select>');
+				document.writeln('				</td>');
+			}
+			// font background color & font color
+			if (cmdForeColorEnabled && rte.cmdForeColor) {
+				document.writeln('				<td>&nbsp;</td>');
+				document.writeln('				<td>');
+				document.writeln('					<select id="backcolor_' + rte.rteID + '" onchange="selectFont(\'' + rte.rteID + '\', this.id);">');
+				document.writeln('						<option value="BackColor">[BackColor]</option>');
+				document.writeln('						<option value="red" style="background: red;">red</option>');
+				document.writeln('						<option value="green" style="background: green;">green</option>');
+				document.writeln('						<option value="yellow" style="background: yellow;">yellow</option>');
+				document.writeln('						<option value="blue" style="background: blue;">blue</option>');
+				document.writeln('						<option value="white" style="background: white;">white</option>');
+				document.writeln('						<option value="black" style="background: black;">black</option>');
+				document.writeln('						<option value="violet" style="background: violet;">violet</option>');
+				document.writeln('					</select>');
+				document.writeln('				</td>');
+			}
+			if (cmdHiliteColorEnabled && rte.cmdHiliteColor) {
+				document.writeln('				<td>&nbsp;</td>');
+				document.writeln('				<td>');
+				document.writeln('					<select id="forecolor_' + rte.rteID + '" onchange="selectFont(\'' + rte.rteID + '\', this.id);">');
+				document.writeln('						<option value="ForeColor">[ForeColor]</option>');
+				document.writeln('						<option value="red" style="color: red;">red</option>');
+				document.writeln('						<option value="green" style="color: green;">green</option>');
+				document.writeln('						<option value="yellow" style="color: yellow;">yellow</option>');
+				document.writeln('						<option value="blue" style="color: blue;">blue</option>');
+				document.writeln('						<option value="white" style="color: white;">white</option>');
+				document.writeln('						<option value="black" style="color: black;">black</option>');
+				document.writeln('						<option value="violet" style="color: violet;">violet</option>');
 				document.writeln('					</select>');
 				document.writeln('				</td>');
 			}
