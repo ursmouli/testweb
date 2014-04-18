@@ -1,0 +1,57 @@
+.rteEditor {
+	border: 1px solid grey;
+	width: 100%;
+	height: 100px;
+	float: left;
+	overflow: auto;
+	overflow-y: auto;
+}
+
+.rteEditor p {
+	margin: 0;
+	padding: 0;
+}
+
+.rteDiv {
+	float: left;
+}
+
+.sprite {
+	background: url('buttons.png');
+	float: left;
+}
+
+.sprite-bgcolor { background-position: 0 0; width: 25px; height: 24px; } 
+.sprite-blackdot { background-position: -75px 0; width: 1px; height: 1px; } 
+.sprite-bold { background-position: -126px 0; width: 25px; height: 24px; } 
+.sprite-centre { background-position: -201px 0; width: 25px; height: 24px; } 
+.sprite-copy { background-position: -276px 0; width: 25px; height: 24px; } 
+.sprite-cut { background-position: -351px 0; width: 25px; height: 24px; } 
+.sprite-decrease_font { background-position: -426px 0; width: 25px; height: 24px; } 
+.sprite-email { background-position: -501px 0; width: 25px; height: 24px; } 
+.sprite-hr { background-position: -576px 0; width: 25px; height: 24px; } 
+.sprite-hyperlink { background-position: -651px 0; width: 25px; height: 24px; } 
+.sprite-image { background-position: -726px 0; width: 25px; height: 24px; } 
+.sprite-increase_font { background-position: -801px 0; width: 25px; height: 24px; } 
+.sprite-indent { background-position: -876px 0; width: 25px; height: 24px; } 
+.sprite-insert_table { background-position: -951px 0; width: 25px; height: 24px; } 
+.sprite-italic { background-position: -1026px 0; width: 25px; height: 24px; } 
+.sprite-justifyfull { background-position: -1101px 0; width: 25px; height: 24px; } 
+.sprite-left_just{ background-position: -1176px 0; width: 25px; height: 24px; } 
+.sprite-list { background-position: -1251px 0; width: 25px; height: 24px; } 
+.sprite-numbered_list { background-position: -1326px 0; width: 25px; height: 24px; } 
+.sprite-outdent { background-position: -1401px 0; width: 25px; height: 24px; } 
+.sprite-paste { background-position: -1476px 0; width: 25px; height: 24px; } 
+.sprite-redo { background-position: -1551px 0; width: 25px; height: 24px; } 
+.sprite-removeformat { background-position: -1626px 0; width: 25px; height: 24px; } 
+.sprite-right_just { background-position: -1701px 0; width: 25px; height: 24px; } 
+.sprite-smiley { background-position: -1776px 0; width: 25px; height: 24px; } 
+.sprite-special_chars { background-position: -1851px 0; width: 25px; height: 24px; } 
+.sprite-spellcheck { background-position: -1926px 0; width: 25px; height: 24px; } 
+.sprite-strikethrough { background-position: 0 -74px; width: 25px; height: 24px; } 
+.sprite-subscript { background-position: -75px -74px; width: 25px; height: 24px; } 
+.sprite-superscript { background-position: -150px -74px; width: 25px; height: 24px; } 
+.sprite-textcolor { background-position: -225px -74px; width: 25px; height: 24px; } 
+.sprite-underline { background-position: -300px -74px; width: 25px; height: 24px; } 
+.sprite-undo { background-position: -375px -74px; width: 25px; height: 24px; } 
+.sprite-unlink { background-position: -450px -74px; width: 25px; height: 24px; } 

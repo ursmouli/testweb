@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>CSS Sprite demo</title>
+		<style type="text/css">
+			.rteEditor {
+				border: 1px solid grey;
+				width: 100%;
+				height: 100px;
+				float: left;
+				overflow: auto;
+				overflow-y: auto;
+			}
+			
+			.rteEditor p {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="button_positions.css">
+		<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+		<script type="text/javascript">
+		/*
+		function moveCursorToEnd(el) {
+			if (typeof el.selectionStart == "number") {
+				el.selectionStart = el.selectionEnd = el.value.length;
+			} else if (typeof el.createTextRange != "undefined") {
+				el.focus();
+				var range = el.createTextRange();
+				range.collapse(false);
+				range.select();
+			}
+		}
+		*/
+		$(document).ready(function() {
+
+			$('.sprite').attr('unselectable', 'on');
+			$('#bold').click(function() { document.execCommand('bold', false, null); });
+			$('#italic').click(function() { document.execCommand('italic', false, null); });
+			$('#underline').click(function() { document.execCommand('underline', false, null); });
+			$('#strikethrough').click(function() { document.execCommand('strikethrough', false, null); });
+			//$('#subscript').click(function() { document.execCommand('subscript', false, null); });
+			//$('#superscript').click(function() { document.execCommand('superscript', false, null); });
+		});
+
+		function logging(msg) {
+			//console.log(msg);
+		}
+		</script>
+	</head>
+	<body onload="">
+		
+		<br>
+		<table border="0">
+			<tr>
+				<td>Rich Text Editor<br><hr></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="rte-buttons" width="500">
+						<!-- Bold -->
+						<div id="bold" class="sprite sprite-bold" title="Bold (Ctrl + B)"></div>
+						<!-- Italic -->
+						<div id="italic" class="sprite sprite-italic" title="Italic (Ctrl + I)"></div>
+						<!-- Underline -->
+						<div id="underline" class="sprite sprite-underline" title="Underline (Ctrl + U)"></div>
+						<!-- Strikethrough -->
+						<div id="strikethrough" class="sprite sprite-strikethrough" title="Strikethrough (Ctrl + T)"></div>
+						
+						<!-- Seperator -->
+						<div class="sprite" style="padding-left: 2px;padding-right: 2px;">|</div>
+						
+						<!-- Superscript -->
+						<div id="subscript" class="sprite sprite-subscript" title="Superscript" onclick="document.execCommand('subscript', false, null);"></div>
+						<!-- Superscript -->
+						<div id="superscript" class="sprite sprite-superscript" title="Subscript" onclick="document.execCommand('superscript', false, null);"></div>
+						
+						<!-- Seperator -->
+						<div class="sprite" style="padding-left: 2px;padding-right: 2px;">|</div>
+						
+						<div class="sprite sprite-bgcolor" title="Background Color" onclick="command('bgcolor')"></div>
+						<div class="sprite sprite-textcolor" title="Text Color" onclick="command('textcolor')"></div>
+						
+						<div class="sprite" style="padding-left: 2px;padding-right: 2px;">|</div>
+						
+						<div class="sprite">
+							<select class="sprite" title="Font Size">
+								<option>[Size]</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+						</div>
+						
+						<div class="sprite" style="padding-left: 2px;padding-right: 2px;"></div>
+						
+						<div class="sprite" style="display : inline-block;">
+							<select style="display : inline-block;" title="Font Format" unselectable="on">
+								<option>[Font]</option>
+								<option>courier new</option>
+								<option>arial</option>
+								<option>sans-serif</option>
+								<option>Verdana</option>
+								<option>Geneva</option>
+							</select>
+						</div>
+					</div>
+					<br><hr>
+					<div class="rteEditor" id="content" contenteditable="true">
+					
+					</div>
+
+					<br>
+					<div class="rteEditor" id="content1" contenteditable="true">
+					
+					</div>
+				</td>
+			</tr>
+	</body>
+</html>

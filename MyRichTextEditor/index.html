@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="button_positions.css">
+
+	<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+	<!-- 3rd party color picker -->
+	<link rel="stylesheet" type="text/css" href="colorpick/spectrum.css">
+    <script type="text/javascript" src="colorpick/spectrum.js"></script>
+
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<div class="rteMenuItems">
+		<div class="rteBasicButtons rteDiv">
+			<!-- Bold -->
+			<a id="bold" class="sprite sprite-bold" title="Bold (Ctrl + B)"></a>
+			<!-- Italic -->
+			<a id="italic" class="sprite sprite-italic" title="Italic (Ctrl + I)"></a>
+			<!-- Underline -->
+			<a id="underline" class="sprite sprite-underline" title="Underline (Ctrl + U)"></a>
+			<!-- Strikethrough -->
+			<a id="strikethrough" class="sprite sprite-strikethrough" style="padding-right: 2px;" title="Strikethrough"></a>
+			
+			<div class="rteDiv">&nbsp;|&nbsp;</div>
+
+			<!-- Superscript -->
+			<a id="subscript" class="sprite sprite-subscript" title="Superscript" 
+				onclick="document.execCommand('subscript', false, null);"></a>
+			<!-- Superscript -->
+			<a id="superscript" class="sprite sprite-superscript" title="Subscript" 
+				style="padding-right: 2px;" 
+				onclick="document.execCommand('superscript', false, null);"></a>
+		</div>
+
+		<div class="rteDiv">&nbsp;|&nbsp;</div>
+
+		<div class="rteFontColor rteDiv">
+			<!-- Font Background Color -->
+			<a id="bgcolor" class="sprite sprite-bgcolor rteColorPicker" title="Background Color"></a>
+			<!-- Font Color -->
+			<a id="txtcolor" class="sprite sprite-textcolor rteColorPicker" title="Text Color"></a>
+		</div>
+
+		<div class="rteDiv">&nbsp;|&nbsp;</div>
+
+		<div class="rteDiv">
+			<!-- Font Size -->
+			<select id="fontSize" title="Font Size">
+				<option value="0">[Size]</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+			</select>
+			<!-- Font Family -->
+			<select id="fontFamily" title="Font Format">
+				<option value="0">[Font]</option>
+				<option value="Arial">Arial</option>
+				<option value="Arial Black">Arial Black</option>
+				<option value="Book Antiqua">Book Antiqua</option>
+				<option value="Charcoal">Charcoal</option>
+				<option value="Courier">Courier</option>
+				<option value="Courier New">Courier New</option>
+				<option value="Comic Sans MS">Comic Sans MS</option>
+				<option value="Gadget">Gadget</option>
+				<option value="Georgia">Georgia</option>
+				<option value="Geneva">Geneva</option>
+				<option value="Helvetica">Helvetica</option>
+				<option value="Lucida Console">Lucida Console</option>
+				<option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+				<option value="Lucida Grande">Lucida Grande</option>
+				<option value="Monaco">Monaco</option>
+				<option value="Palatino Linotype">Palatino Linotype</option>
+				<option value="sans-serif">sans-serif</option>
+				<option value="Tahoma">Tahoma</option>
+				<option value="Times New Roman">Times New Roman</option>
+				<option value="Trebuchet MS">Trebuchet MS</option>
+				<option value="Verdana">Verdana</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- rich text eidtors -->
+	<div class="rteEditor" id="content" contenteditable="true"></div>
+	<br>
+	<div class="rteEditor" id="content1" contenteditable="true"></div>
+
+	<br>
+</body>
+</html>

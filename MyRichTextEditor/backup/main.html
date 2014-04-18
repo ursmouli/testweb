@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var editorDoc;
+        function InitEditable () {
+            var editor = document.getElementById ("editor");
+            editorDoc = editor.contentWindow.document;          
+            var editorBody = editorDoc.body;
+            //console.log(editorBody);
+            // turn off spellcheck
+            if ('spellcheck' in editorBody) {    // Firefox
+                editorBody.spellcheck = false;
+            }
+
+            if ('contentEditable' in editorBody) {
+                // allow contentEditable
+                editorBody.contentEditable = true;
+            }
+            else {  // Firefox earlier than version 3
+                if ('designMode' in editorDoc) {
+                    // turn on designMode
+                    editorDoc.designMode = "on";                
+                }
+            }
+        }
+
+        function ToggleBold () {
+            editorDoc.execCommand ('bold', false, null);
+        }
+    </script>
+</head>
+<body onload="InitEditable ();">
+    First, write and select some text in the editor.
+    <br />
+    <iframe id="editor" src="editable.html"></iframe>
+    <!--div id="editor" contenteditable="true"></div-->
+    <br /><br />
+    You can toggle the bold/normal state of the selected text with this button:
+    <br />
+    <button onclick="ToggleBold ();">Bold</button>
+</body>
+</html>
